@@ -3,12 +3,11 @@
 @section('container')
 <div class="container">
     <div class="row">
-        <div class="col-10 mt-3"></div>
+        <div class="col-10 mt-5"></div>
         @foreach ($post as $berita)
-            <article class="mb-5">
-                <h2>{{ $berita["title"] }}</h2>
-                <h5>by : {{ $berita["penulis"] }}</h5>
-                <p>{{ $berita["body"] }} <a href="/news/{{ $berita["title_lain"] }}">Read more ...</a></p>
+            <article class="mb-3">
+                <h2>{{ $berita->title }}</h2>
+                <p>{{ $berita->potongan }} <a href="/news/{{ $berita->id }}">Read more ...</a></p>
             </article>
         @endforeach
     </div>
